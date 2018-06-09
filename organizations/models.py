@@ -29,6 +29,11 @@ class Organization(TimeStampedModel):
         help_text=_('Please add only .PNG files for logo images. This logo will be used on certificates.'),
         null=True, blank=True, max_length=255
     )
+    banner = models.ImageField(
+        upload_to='organization_logos',
+        help_text=_('Please add only .PNG files for logo images. This logo will be used on certificates.'),
+        null=True, blank=True, max_length=255
+    )
     active = models.BooleanField(default=True)
 
     def __unicode__(self):
